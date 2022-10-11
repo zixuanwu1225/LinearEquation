@@ -1,0 +1,9 @@
+Variables
+- should include x and y values for both coords
+- should have variables for scanners that ask for two coord points
+-slope
+-y intercept
+-distance between two points
+-allow x value as scanner part and use to form y value on the line given by the prev equations already. (Print as coords)
+Notes -
+If coordinate points are given, use DecimalFormat to make coords rounded to nearest hundredth.
