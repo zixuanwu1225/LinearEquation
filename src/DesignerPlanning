@@ -38,5 +38,5 @@ uses call properly
 Figure out how to parse code properly, ex. given coords such as (4,-7) or (10,-20), if not possible attempt to make
 code that tells user to input ints that can be properly parsed
 remember to add comments for convenience + check
-Perhaps use substring ex. sub out "(", ")", use indexOf "," to find where it is, substring first few out, then substring
+Perhaps use substring ex. sub out "(" and ")", use indexOf "," to find where it is, substring first few out, then substring
 next few, gain two integers then reformat into coord points again after taking ints for equations
