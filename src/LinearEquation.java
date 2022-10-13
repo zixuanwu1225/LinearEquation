@@ -19,37 +19,56 @@ public class LinearEquation {
         Rise = finy - inty;
         Run = finx - intx;
     }
-
+    //Used for privates + finding variables for usage in slope
     public double findSlope() {
         double slope = Rise / Run;
         return slope;
 
     }
+    //finds slope
     public double findIntercept()
     {
         double intercept = y1 - (findSlope()+x1);
         return intercept;
     }
-
-    public Integer printEquation1(String coords1) {
-        String removeParentheses1 = coords1.substring(0, 1);
-        String removeParentheses2 = coords1.substring(1, removeParentheses1.length() - 1);
-        int p1Placement = coords1.indexOf(",");
-        String firstInteger = coords1.substring(p1Placement, removeParentheses2.length() - 1);
-        int converted1 = Integer.parseInt(firstInteger);
-        return converted1;
+    //finds intercept
+    public double getFirstX()
+    {
+        return x1;
     }
-
-    public String printEquation2(String coords1) {
-        String removeParentheses1 = coords1.substring(0, 1);
-        String removeParentheses2 = coords1.substring(1, removeParentheses1.length() - 1);
-        int p1Placement = coords1.indexOf(",");
-        String secondInteger = coords1.substring(removeParentheses2.length(), p1Placement - 1);
-        Integer.valueOf(secondInteger);
-        return secondInteger;
+    public void setFirstX(int FirstX)
+    {
+        x1 =  FirstX;
     }
+    public double getFirstY()
+    {
+        return y1;
+    }
+    public void setFirstY(int FirstY)
+    {
+        x1 =  FirstY;
+    }
+    public double getSecondX()
+    {
+        return x2;
+    }
+    public void setSecondX(int SecondX)
+    {
+        x1 =  SecondX;
+    }
+    public double getSecondY()
+    {
+        return y2;
+    }
+    public void setSecondY(int SecondY)
+    {
+        x1 =  SecondY;
+    }
+    //getter methods for x1,y1,x2,y2 values
+    //setter methods for x1,y1,x2,y2 values
+
     public void printEquation()
     {
-        System.out.println("y="+Rise+"/"+Run+"x"+"+"+findIntercept());
+        System. out.println("y="+Rise+"/"+Run+"x"+"+"+findIntercept());
     }
 }
