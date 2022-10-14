@@ -1,5 +1,5 @@
-/*import java.util.Scanner;
-public class EquationRunner {
+import java.util.Scanner;
+public class EquationRunner1 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         //for first scanner
@@ -11,26 +11,22 @@ public class EquationRunner {
         String coordinates4 = coordinates3;
         //converts strings into integers
         String removeParentheses1 = coordinates1.substring(0, 1);
-        String removeParentheses2 = coordinates1.substring(1, removeParentheses1.length());
+        String removeParentheses2 = coordinates1.substring(coordinates1.length()-1);
         int p1Placement = coordinates1.indexOf(",");
-        String firstInteger = coordinates1.substring(p1Placement, removeParentheses2.length());
+        String firstInteger = coordinates1.substring(p1Placement+1);
         int converted1 = Integer.parseInt(firstInteger);
-        String removeParentheses3 = coordinates2.substring(0, 1);
-        String removeParentheses4 = coordinates2.substring(1, removeParentheses3.length());
         int d1Placement = coordinates2.indexOf(",");
-        String secondInteger = coordinates2.substring(removeParentheses4.length(), d1Placement);
+        String secondInteger = coordinates2.substring(removeParentheses1.length(), d1Placement);
         int converted2 = Integer.parseInt(secondInteger);
         //converts strings into integers
         //converts strings into integers
         String removeParentheses5 = coordinates3.substring(0, 1);
-        String removeParentheses6 = coordinates3.substring(1, removeParentheses5.length());
+        String removeParentheses6 = coordinates3.substring(coordinates3.length()-1);
         int f1Placement = coordinates3.indexOf(",");
-        String thirdInteger = coordinates3.substring(f1Placement, removeParentheses6.length());
+        String thirdInteger = coordinates3.substring(f1Placement+1);
         int converted3 = Integer.parseInt(thirdInteger);
-        String removeParentheses7 = coordinates4.substring(0, 1);
-        String removeParentheses8 = coordinates4.substring(1, removeParentheses7.length());
         int q1Placement = coordinates4.indexOf(",");
-        String fourthInteger = coordinates4.substring(removeParentheses8.length(), q1Placement);
+        String fourthInteger = coordinates4.substring(removeParentheses5.length(), q1Placement);
         int converted4 = Integer.parseInt(fourthInteger);
         //converts strings into integers
         LinearEquation p = new LinearEquation(converted1,converted2,converted3,converted4);
@@ -39,4 +35,3 @@ public class EquationRunner {
     }
 
 }
-*/
