@@ -1,8 +1,10 @@
 import java.net.URISyntaxException;
 import java.util.Scanner;
+import java.text.*;
 public class LinearEquation {
     public String coords1;
     Scanner s = new Scanner(System.in);
+    DecimalFormat currency = new DecimalFormat("###0.00");
     private String newString;
     private double x1;
     private double y1;
@@ -10,26 +12,52 @@ public class LinearEquation {
     private double x2;
     private double Rise;
     private double Run;
+    private double Value;
 
     public LinearEquation(double intx, double inty, double finx, double finy) {
-        intx = x1;
-        finx = x2;
-        inty = y1;
-        finy = y2;
+        x1 = intx;
+        x2 = finx;
+        y1 = inty;
+        y2 = finy;
         Rise = finy - inty;
         Run = finx - intx;
+    }
+    public LinearEquation(double intx, double inty, double finx, double finy,double value)
+    {
+        x1 = intx;
+        x2 = finx;
+        y1 = inty;
+        y2 = finy;
+        Rise = finy - inty;
+        Run = finx - intx;
+        Value = value;
+    }
+    public double findNew()
+    {
+        double newValue = (Rise/Run)*Value + findIntercept();
+        return newValue;
     }
     //Used for privates + finding variables for usage in slope
     public double findSlope() {
         double slope = Rise / Run;
         return slope;
-
     }
+    public String printSlope()
+    {
+        String giveSlope = Rise + "/" + Run;
+        return giveSlope;
+    }
+
     //finds slope
     public double findIntercept()
     {
         double intercept = y1 - (findSlope()+x1);
         return intercept;
+    }
+    public double findDistance()
+    {
+        double distance = Math.sqrt(Math.pow(Rise,2)+Math.pow(Run,2));
+        return distance;
     }
     //finds intercept
     public double getFirstX()
