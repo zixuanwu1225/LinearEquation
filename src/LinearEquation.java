@@ -94,9 +94,4 @@ public class LinearEquation {
     }
     //getter methods for x1,y1,x2,y2 values
     //setter methods for x1,y1,x2,y2 values
-
-    public void printEquation()
-    {
-        System. out.println("y="+Rise+"/"+Run+"x"+"+"+findIntercept());
-    }
 }
