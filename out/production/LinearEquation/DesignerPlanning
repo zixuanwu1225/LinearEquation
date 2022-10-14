@@ -1,0 +1,42 @@
+Variables
+- should include x and y values for both coords
+- should have variables for scanners that ask for two coord points
+-slope
+-slope intecept form equation
+-y intercept
+-distance between two points
+-allow x value as scanner part and use to form y value on the line given by the prev equations already. (Print as coords)
+Notes -
+Work on user input parts first
+If coordinate points are given, use DecimalFormat to make coords rounded to nearest hundredth.
+Private methods should be used for x and y variables, and second x and y coords.
+Program for coords should be scanned in as a string so that user can input "(x,y)"
+(parse out the x and y variables to use in equations for slope intercept etc.)
+Does not need to support doubles
+slope intercept form = "y=mx+b" (b must be printed as decimal value)(m, if is fraction, does not need to be reduced)
+(m should be printed as fraction not decimal)
+
+classes that should be used
+Instance variables
+"private int x1 (variables represent x coord)"(use same for x2,y1,y2)
+Constructors
+"public LinearEquation(int x1, int y1, int x2, int y2)" (public methods should be used for formatting given inputs + equations)
+(should also be used for printing, later called in main method)
+Methods(alt method = just use separate methods so toString wouldn't be HOOG)
+public String toString() -displays all relevant information including x y coord formation, slope inter form equation-
+
+
+EquationRunner.java ->main class
+ask user for first coord point
+ask user for second coord point
+after prints out slope + other necessary information, ask user for an x input
+print out point with y value on the line using the slope intercept equation, follow through with format of print.
+
+More important notes
+figure out how to use call with that scanner(should be in main method - unsure - )
+uses call properly
+Figure out how to parse code properly, ex. given coords such as (4,-7) or (10,-20), if not possible attempt to make
+code that tells user to input ints that can be properly parsed
+remember to add comments for convenience + check
+Perhaps use substring ex. sub out "(" and ")", use indexOf "," to find where it is, substring first few out, then substring
+next few, gain two integers then reformat into coord points again after taking ints for equations
