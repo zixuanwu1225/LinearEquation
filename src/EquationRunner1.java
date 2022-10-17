@@ -40,7 +40,7 @@ public class EquationRunner1 {
         System.out.println("Distance between two points: "+currency.format(p.findDistance()));
         //For later use with printing out
         System.out.println("Type in an x value");
-        Integer value = x.nextInt();
+        Double value = x.nextDouble();
         LinearEquation b = new LinearEquation(converted1,converted2,converted3,converted4,value);
         System.out.println("Solved coordinate point is: (" + value + ","+currency.format(b.findNew())+")");
     }
