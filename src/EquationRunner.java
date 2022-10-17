@@ -1,4 +1,4 @@
-import java.util.Scanner;
+/*import java.util.Scanner;
 public class EquationRunner {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -38,3 +38,5 @@ public class EquationRunner {
     }
 
 }
+*/
+//This was a prototype and was modified to work in EquationRunner1.java
